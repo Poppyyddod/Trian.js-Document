@@ -14,19 +14,18 @@ trian controller update-all
 ```
 
 ### **Create a New Controller**
-
+Example: trian make:controller order/getOne
 ```bash
 trian make:controller <module_name>/<controller_name>
 ```
 
 ### **Update controllers syntax in the module**
-
+Example: trian make:controller order
 ```bash
 trian controller update <module_name>
 ```
 
 ### **Update controllers syntax in all module**
-
 ```bash
 trian controller update-all
 ```
