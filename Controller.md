@@ -18,3 +18,15 @@ trian controller update-all
 ```bash
 trian make:controller <module_name>/<controller_name>
 ```
+
+### **Update controllers syntax in the module**
+
+```bash
+trian controller update <module_name>
+```
+
+### **Update controllers syntax in all module**
+
+```bash
+trian controller update-all
+```
