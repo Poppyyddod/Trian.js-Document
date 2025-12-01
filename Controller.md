@@ -1,6 +1,6 @@
 # 📘 Controller Feature (Trian.js)
 
-The **Controller Feature** in Trian.js helps developers quickly generate, update, and maintain controllers inside each module.  
+`Controller Feature` helps developers quickly generate, update, and maintain controllers inside each module.  
 This feature ensures consistent code structure, reduces repetition, and keeps large projects organized.
 
 ---
@@ -13,7 +13,7 @@ trian controller update <module_name>
 trian controller update-all
 ```
 
-### **Create a New Controller**
+### **Create a new controller**
 Example: `trian make:controller order/getOne`
 ```bash
 trian make:controller <module_name>/<controller_name>
