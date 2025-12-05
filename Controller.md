@@ -5,7 +5,7 @@ This feature ensures consistent code structure, reduces repetition, and keeps la
 
 ---
 
-## 🚀 Controller CLI Commands
+## 🚀 CLI Commands
 
 ```bash
 trian make:controller <module_name>/<controller_name>
@@ -18,14 +18,55 @@ Example: `trian make:controller order/getOne`
 ```bash
 trian make:controller <module_name>/<controller_name>
 ```
+Result: You will see this
+```bash
+// Uncomment the following line for globalRepo type-safety.
+import 'trianjs/repository';
 
-### **Update controllers syntax in the module**
+import type { TrianBaseController, TrianContext, TrianRoute, TrianMiddleware } from 'trianjs/core/types';
+import { TrianHandleErrorCls, RepoCache } from 'trianjs/core';
+
+export default class ControllerName implements TrianBaseController {
+    // Context data (request, response, etc...)
+    private context = {} as TrianContext;
+
+    // Global repository (use for call use database access)
+    private globalRepo = {} as RepoCache;
+
+    get route(): TrianRoute {
+        return {
+            module: '<module_name>',
+            method: 'get',
+            path: '/<module_name>'
+        };
+    }
+
+    get middleware(): Array<TrianMiddleware> {
+        return [];
+    }
+
+    async handle() {
+        try {
+            /////////////////////////////
+            /// Business handle logic ///
+            /////////////////////////////
+
+            return this.context.response.status(200).json({});
+        } catch (error) {
+            // Trian auto runtime, validation errors handle(Required!, if you are using our Trian.js library)
+            return TrianHandleErrorCls.responseToClient(this.context, error);
+        }
+    }
+}
+```
+
+### **Update controllers in the module**
 Example: `trian make:controller order`
 ```bash
 trian controller update <module_name>
 ```
 
-### **Update controllers syntax in all module**
+### **Update controllers in all module**
 ```bash
 trian controller update-all
 ```
