@@ -60,13 +60,13 @@ export default class ControllerName implements TrianBaseController {
 }
 ```
 
-### **Update controllers in the module**
-Example: `trian make:controller order`
+### **Update controllers for the module**
+Example: `trian controller update order`
 ```bash
 trian controller update <module_name>
 ```
 
-### **Update controllers in all module**
+### **Update controllers for all module**
 ```bash
 trian controller update-all
 ```
