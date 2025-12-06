@@ -18,7 +18,8 @@ Example: `trian make:controller order/getOne`
 ```bash
 trian make:controller <module_name>/<controller_name>
 ```
-Result: You will see this
+
+Result: generate file "src/app/controllers/<module_name>/<controller_name>"
 ```bash
 // Uncomment the following line for globalRepo type-safety.
 import 'trianjs/repository';
