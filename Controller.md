@@ -25,7 +25,7 @@ Example: `trian make:controller order/getOne`
 trian make:controller <module_name>/<controller_name>
 ```
 
-Result: generate file "src/app/controllers/<module_name>/<controller_name>"
+Result:
 ```bash
 // Uncomment the following line for globalRepo type-safety.
 import 'trianjs/repository';
