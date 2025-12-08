@@ -3,6 +3,9 @@
 ## 🚀 CLI Commands
 ```bash
 npx trianjs@latest create:project <project_name>
+```
+
+```bash
 trian init
 ```
 
