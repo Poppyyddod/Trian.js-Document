@@ -18,6 +18,30 @@ Example: `trian make:repo order`
 trian make:repo <module_name>
 ```
 
+Result:
+
+```bash
+import { $QueryBuilder, $Repository, TrianRepositoryClient } from 'trianjs/core';
+import { InferModelType, TrianContext } from 'trianjs/core/types';
+import orderModule from '../modules/user.module';
+
+type Model = InferModelType<typeof orderModule.model>;
+
+class OrderRepo extends TrianRepositoryClient {
+    get module(): string {
+        return 'order';
+    }
+
+    get repositories() {
+        return {
+            'get': async (ctx: TrianContext) => { }
+        }
+    }
+}
+
+export default new OrderRepo();
+```
+
 ### **Update/Generate global repository type cached for type-safety**
 ```bash
 trian repo update
@@ -37,4 +61,8 @@ dependencies: {
 Step 2: If you want to use type-safety. You need to import type caching in the controller.
 ```bash
 import 'trianjs/repository';
+
+...
+Example:
+const posts = await globalRepo.use("post", "getAll")(this.context);
 ```
