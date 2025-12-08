@@ -9,7 +9,13 @@ This feature ensures consistent code structure, reduces repetition, and keeps la
 
 ```bash
 trian make:controller <module_name>/<controller_name>
+```
+
+```bash
 trian controller update <module_name>
+```
+
+```bash
 trian controller update-all
 ```
 
