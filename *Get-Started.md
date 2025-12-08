@@ -6,7 +6,7 @@ npx trianjs@latest create:project <project_name>
 ```
 
 ```bash
-trian init
+npx trian init
 ```
 
 ## **Create Your New Project**
@@ -18,9 +18,7 @@ npx trianjs@latest create:project <project_name>
 ## **Init Your Project**
 Case 2: If you already have a project folder, use this command.
 ```bash
-npm install trianjs@latest
-npm install -g trianjs@latest
-trian init
+npx trian init
 ```
 
 ## **Result**
